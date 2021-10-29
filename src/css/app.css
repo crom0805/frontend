@@ -1,1 +1,17 @@
 /* app global css */
+
+/* header */
+.hd-blue {
+  background-color: #FFFFFF; color: #929292
+}
+
+/* left sidebar (=left menu) */
+.menu-blue {
+  background-color: #0C2135; color: #A0A8AF
+}
+.menu-blue .menu-dt-blue {
+  background-color: #133556
+}
+.menu-link {
+  background: #EEB006; color: #0C2135;
+}
