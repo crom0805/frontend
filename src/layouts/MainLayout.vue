@@ -52,7 +52,7 @@
             <q-item-label>CRM Dashboard</q-item-label>
           </q-item-section>
         </q-item>
-        <q-expansion-item icon="person" label="User">
+        <q-expansion-item icon="person" label="User" default-opened>
           <q-list class="q-pl-lg menu-dt-blue">
             <q-item to="/UserList" clickable :active="link === 'UserList'" @click="link = 'UserList'" active-class="menu-link">
               <q-item-section avatar>
@@ -60,6 +60,14 @@
               </q-item-section>
               <q-item-section>
                 <q-item-label>User List</q-item-label>
+              </q-item-section>
+            </q-item>
+            <q-item to="/UserSignup" clickable :active="link === 'UserSignup'" @click="link = 'UserSignup'" active-class="menu-link">
+              <q-item-section avatar>
+                <q-icon name="manage_accounts"/>
+              </q-item-section>
+              <q-item-section>
+                <q-item-label>User Signup</q-item-label>
               </q-item-section>
             </q-item>
           </q-list>
@@ -74,7 +82,6 @@
 </template>
 
 <script>
-
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
@@ -87,9 +94,6 @@ export default defineComponent({
       leftDrawerOpen,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value
-      },
-      moveMenu () {
-        alert("??");
       },
       link: ref('Dashboard')
     }

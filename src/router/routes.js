@@ -6,6 +6,7 @@ const routes = [
       {path: '/Dashboard', alias:'/', component: () => import('pages/Dashboard.vue')},
       {path: '/Dashboard2', component: () => import('pages/Dashboard2.vue')},
       {path: '/UserList', component: () => import('pages/user/UserList.vue')},
+      {path: '/UserSignup', component: () => import('pages/user/UserSignup.vue')},
     ]
   },
 
