@@ -10,8 +10,15 @@
   background-color: #0C2135; color: #A0A8AF
 }
 .menu-blue .menu-dt-blue {
-  background-color: #133556
+  background-color: #133556;
 }
 .menu-link {
-  background: #EEB006; color: #0C2135;
+  background: #0960BD; color: #F0FFFB;
+}
+.menu-dt-item {
+  padding-left: 40px;
+}
+.q-item__section--avatar {
+  /* override */
+  min-width: 30px; width: 30px;
 }
