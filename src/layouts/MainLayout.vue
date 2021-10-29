@@ -29,7 +29,7 @@
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered :width="250">
       <q-scroll-area dark class="fit menu-blue">
         <q-item to="/Dashboard" :active="link === 'Dashboard'" @click="link = 'Dashboard'" active-class="menu-link">
-          <q-item-section avatar>
+          <q-item-section avatar class="menu-dt-avatar">
             <q-icon name="dashboard"/>
           </q-item-section>
           <q-item-section>
@@ -37,7 +37,7 @@
           </q-item-section>
         </q-item>
         <q-item to="/Dashboard2" :active="link === 'Dashboard2'" @click="link = 'Dashboard2'" active-class="menu-link">
-          <q-item-section avatar>
+          <q-item-section avatar class="menu-dt-avatar">
             <q-icon name="dashboard"/>
           </q-item-section>
           <q-item-section>
@@ -47,7 +47,7 @@
         <q-expansion-item icon="person" label="User" default-opened>
           <q-list class="menu-dt-blue">
             <q-item class="menu-dt-item" to="/UserList" :active="link === 'UserList'" @click="link = 'UserList'" active-class="menu-link">
-              <q-item-section avatar>
+              <q-item-section avatar class="menu-dt-avatar">
                 <q-icon name="list"/>
               </q-item-section>
               <q-item-section>
@@ -55,7 +55,7 @@
               </q-item-section>
             </q-item>
             <q-item class="menu-dt-item"  to="/UserSignup" :active="link === 'UserSignup'" @click="link = 'UserSignup'" active-class="menu-link">
-              <q-item-section avatar>
+              <q-item-section avatar class="menu-dt-avatar">
                 <q-icon name="manage_accounts"/>
               </q-item-section>
               <q-item-section>
@@ -67,7 +67,7 @@
       </q-scroll-area>
     </q-drawer>
 
-    <q-page-container class="bg-grey-2">
+    <q-page-container class="bg-grey-2 fit scroll">
       <router-view />
     </q-page-container>
   </q-layout>
@@ -92,3 +92,31 @@ export default defineComponent({
   }
 })
 </script>
+<style>
+
+/* header */
+.hd-blue {
+  background-color: #FFFFFF; color: #929292
+}
+
+/* left sidebar (=left menu) */
+.menu-blue {
+  background-color: #0C2135; color: #A0A8AF
+}
+.menu-blue .menu-dt-blue {
+  background-color: #133556;
+}
+.menu-link {
+  background: #0960BD; color: #F0FFFB;
+}
+.menu-dt-item {
+  padding-left: 40px;
+}
+.menu-dt-avatar {
+  min-width: 30px; width: 30px;
+}
+
+.q-expansion-item .q-item__section--avatar {
+  min-width: 30px; width: 30px;
+}
+</style>
