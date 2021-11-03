@@ -16,10 +16,10 @@
           </q-btn>
           <q-btn round dense flat color="black" :icon="$q.fullscreen.isActive ? 'fullscreen_exit' : 'fullscreen'"
                  @click="$q.fullscreen.toggle()" v-if="$q.screen.gt.sm">
-            <q-tooltip class="bg-accent">Maximize</q-tooltip>
+            <q-tooltip class="bg-accent">Max/Min</q-tooltip>
           </q-btn>
           <q-btn round dense flat color="black" icon="logout"
-                 @click="$q.fullscreen.toggle()">
+                 to="/Login">
             <q-tooltip class="bg-accent">Logout</q-tooltip>
           </q-btn>
         </div>
